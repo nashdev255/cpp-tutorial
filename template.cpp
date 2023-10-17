@@ -1,5 +1,7 @@
-#ifndef TEMPLATE_HPP
-#define TEMPLATE_HPP
+#ifndef TEMPLATE_CPP
+#define TEMPLATE_CPP
+
+#include <iostream>
 
 template <typename T>
 T power(const T n, const int a) {
@@ -21,5 +23,15 @@ class Vector2 {
     friend Vector2 operator*(const U i, const Vector2<T> v);
 
 };
+
+int main() {
+  Vector2<double> v1(2.5, 2);
+  Vector2<double> v2(2.5, 4);
+  double v = v1 * v2;
+
+  std::cout << v << std::endl;
+
+  return 0;
+}
 
 #endif
