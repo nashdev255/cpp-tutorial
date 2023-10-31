@@ -12,7 +12,8 @@ class Degree {
       degree = d;
     }
 
-    operator int() {
+    // force to cast explicitly
+    explicit operator int() {
       return degree;
     }
 
@@ -25,10 +26,11 @@ class Degree {
 
 int main() {
   Degree theta_0 = 30;
-  int val = theta_0;
+
+  int val = static_cast<int>(theta_0);
 
   std::cout << val << std::endl;
-  
+
   return 0;
 }
 
