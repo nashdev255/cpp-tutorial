@@ -24,9 +24,13 @@ class Vector2 {
 
 };
 
+using Vector2i = Vector2<int>;
+using Vector2f = Vector2<float>;
+using Vector2d = Vector2<double>;
+
 int main() {
-  Vector2<double> v1(2.5, 2);
-  Vector2<double> v2(2.5, 4);
+  Vector2d v1(2.5, 2);
+  Vector2d v2(2.5, 4);
   double v = v1 * v2;
 
   std::cout << v << std::endl;
